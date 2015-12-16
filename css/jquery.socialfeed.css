@@ -3,10 +3,10 @@
     background-color:red !important;
 }
 .social-feed-element{
-    width: 20% !important;
+    width: 300px !important;
     display: inline-block;  
     background-color: #000;
-    min-height: 200px;
+    min-height: 330px;
     position: relative;
     margin: 20px !important;
     background-size: cover;

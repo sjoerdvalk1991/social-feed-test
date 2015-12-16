@@ -754,19 +754,54 @@ if (typeof Object.create !== 'function') {
             }
         };
 
+        var packery = function(){
+            setTimeout(function(){  
+                $('#social').packery({
+                    columnWidth: 50,
+                    itemSelector: '.social-feed-element'
+                });
+            }, 2500);  
+ 
+        }
+        setTimeout(function(){ 
+            console.log(Feed.twitter.posts);
+         }, 1000);
+        console.log(Feed.twitter.posts);
+        var newestTweet = {};
+        var newestInsta = {};
         //make the plugin chainable
         return this.each(function() {
             // Initialization
+
+
             $('.social-feed-container').html('');
 
             Feed.init();
-            
+            setTimeout(function(){ 
+                console.log(Feed.instagram.posts[0].content.message);
+            }, 1000);
+  
                 setInterval(function() {
-                    $('.social-feed-container').html('');
-                    return Feed.init();
+                    if(newestTweet == Feed.twitter.posts[0].content.message && newestInsta == Feed.instagram.posts[0].content.message){
+                        console.log(Feed);
+                        return Feed.init();
+                        
+                    }else{
+                        console.log('test');
+                        newestTweet = Feed.twitter.posts[0].content.message;
+                        newestInsta = Feed.instagram.posts[0].content.message;
+                        $('.social-feed-container').html('');
+                        return Feed.init(), packery();  
+
+                    }
+                     
+                    
+                        
+                    
                     
 
-                }, 35000);
+
+                }, 5000);
             
         })
     };
