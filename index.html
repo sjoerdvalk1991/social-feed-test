@@ -102,8 +102,9 @@
         packery();
         setInterval(function() {
             //then load new posts
-            updateFeed();
             $('.feed').fadeOut(2000);
+            $('.social-feed-container').html('');
+            updateFeed();
             $('.feed').fadeIn(2500);
             packery();
         }, 35000);
