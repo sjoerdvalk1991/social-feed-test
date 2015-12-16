@@ -3,9 +3,13 @@
     background-color:red !important;
 }
 .social-feed-element{
-    width: 28% !important;
+    width: 20% !important;
     display: inline-block;  
+    background-color: #000;
+    min-height: 200px;
     margin: 20px !important;
+    background-size: cover;
+
 }
 
 .social-feed-element .pull-left{
@@ -121,10 +125,10 @@
     -webkit-backface-visibility: hidden;
     margin:-1px;
     margin-top:25px;
-    background-color: #fff;
+    background-color: #000;
     color: #333;
     text-align:left;
-    max-height: 30vh;
+    max-height: 45vh;
     font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 16px;
@@ -137,9 +141,10 @@
     padding:15px;
     position: absolute;
     bottom: 0;
+    background: #000;
     color: white !important;
     font-size: 18px;
-    width: 100%;
+    width: 90%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 .social-feed-element .social-network-icon{

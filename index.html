@@ -57,14 +57,14 @@
                 // FACEBOOK
                 facebook: {
                     accounts: queryTags,
-                    limit: 255,
+                    limit: 100,
                     access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
                 },
                 // GOOGLEPLUS
                 // Twitter
                 twitter: {
                     accounts: queryTags,
-                    limit: 255,
+                    limit: 150,
                     consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P', // make sure to have your app read-only
                     consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O', // make sure to have your app read-only
                 },
@@ -104,7 +104,7 @@
             //then load new posts
             updateFeed();
             $('.feed').fadeOut(2000);
-            $('.feed').fadeIn(1000);
+            $('.feed').fadeIn(2500);
             packery();
         }, 35000);
 

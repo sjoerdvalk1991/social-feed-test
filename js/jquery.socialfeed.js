@@ -98,7 +98,6 @@ if (typeof Object.create !== 'function') {
         };
 
         function SocialFeedPost(social_network, data) {
-            console.log(data);
             this.content = data;
             this.content.social_network = social_network;
             this.content.attachment = (this.content.attachment === undefined) ? '' : this.content.attachment;
