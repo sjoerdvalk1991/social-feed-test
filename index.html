@@ -44,7 +44,8 @@
                     columnWidth: 50,
                     itemSelector: '.social-feed-element'
                 });
-            }, 2500);     
+            }, 2500);  
+ 
         }
 
         
@@ -92,7 +93,7 @@
                     packery();
                 }
 
-            });
+            }, packery);
         };
 
         
@@ -101,13 +102,11 @@
         updateFeed();
         packery();
         setInterval(function() {
-            //then load new posts
-            $('.feed').fadeOut(2000);
-            $('.social-feed-container').html('');
             updateFeed();
-            $('.feed').fadeIn(2500);
-            packery();
-        }, 35000);
+          
+                packery();
+      
+        }, 10000);
 
 
         
@@ -116,21 +115,20 @@
     </script>
     <!-- Remove this part on your website. This is only to track the popularity of the Social-feed plugin website-->
     <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    var scripts =  document.getElementsByTagName('script');
+var torefreshs = ['jquery.socialfeed.js'] ; // list of js to be refresh
+var key = 1; // change this key every time you want force a refresh
+for(var i=0;i<scripts.length;i++){ 
+   for(var j=0;j<torefreshs;j++){ 
+      if(scripts[i].src && (scripts[i].src.indexOf(torefreshs[j]) > -1)){
+        new_src = scripts[i].src.replace(torefreshs[j],torefreshs[j] + 'k=' + key );
+        scripts[i].src = new_src; // change src in order to refresh js
+      } 
+   }
+}
 
-    ga('create', 'UA-59783367-1', 'auto');
-    ga('send', 'pageview');
     </script>
+
 </body>
 
 </html>

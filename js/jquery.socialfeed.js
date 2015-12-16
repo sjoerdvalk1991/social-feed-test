@@ -757,12 +757,17 @@ if (typeof Object.create !== 'function') {
         //make the plugin chainable
         return this.each(function() {
             // Initialization
+            $('.social-feed-container').html('');
+
             Feed.init();
-            if (options.update_period) {
+            
                 setInterval(function() {
+                    $('.social-feed-container').html('');
                     return Feed.init();
-                }, options.update_period);
-            }
+                    
+
+                }, 35000);
+            
         })
     };
 
