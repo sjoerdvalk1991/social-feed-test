@@ -2,16 +2,17 @@
 .social-feed-element.hidden{
     background-color:red !important;
 }
-
 .social-feed-element{
-    width: 44% !important;
+    width: 28% !important;
     display: inline-block;  
     margin: 20px !important;
 }
 
 .social-feed-element .pull-left{
     float:left;
-    margin-right: 10px;
+    margin-left: 3px;
+    position: absolute;
+    margin-top: 3px;
 }
 .social-feed-element .pull-right {
     margin-left: 10px;
@@ -84,8 +85,8 @@
     width:16px;
 }
 .social-feed-element .media-body div{
-    color:#666;
-    line-height: 20px;
+    color:#fff;
+    line-height: 22px;
 }
 .social-feed-element:first-child {
     margin-top: 0;
@@ -104,7 +105,10 @@
 }
 
 .social-feed-element .muted {
-    color: #999;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 .social-feed-element a.muted:hover,
 .social-feed-element a.muted:focus {
@@ -120,6 +124,7 @@
     background-color: #fff;
     color: #333;
     text-align:left;
+    max-height: 30vh;
     font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 16px;
@@ -130,6 +135,12 @@
 
 .social-feed-element .content{
     padding:15px;
+    position: absolute;
+    bottom: 0;
+    color: white !important;
+    font-size: 18px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .social-feed-element .social-network-icon{
     opacity:0.7;
@@ -137,7 +148,7 @@
 
 
 .social-feed-element .author-title{
-    color: #444;
+    color: #fff;
     line-height: 1.5em;
     font-weight: 500;  
 }
